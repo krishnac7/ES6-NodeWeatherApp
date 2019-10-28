@@ -15,4 +15,15 @@ A simple Async Weather App that adhers to ES-6 Standards and demonstrates featur
 npm install 
 npm run start
 ```
+## Publishing on Heroku:
+
+* Post Updating the API Keys, run the following commands
+
+```
+git add .
+git commit -m "updated api keys"
+heroku create
+git push heroku master
+```
+
 
