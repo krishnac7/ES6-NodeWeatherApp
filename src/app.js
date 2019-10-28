@@ -36,7 +36,7 @@ app.get('',(req,res)=>{
 
 app.get('/about',(req,res)=>{
     res.render('about',{
-        title:'About me',
+        title:'About',
         name:'Krishna Balaga'
     })
 })
@@ -101,5 +101,5 @@ app.get('*',(req,res)=>{
 
 //start up server
 app.listen(port,() =>{
-    console.log('Server is up at'+port)
+    console.log('Server is up at '+port)
 })
