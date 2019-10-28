@@ -15,6 +15,13 @@ A simple Async Weather App that adhers to ES-6 Standards and demonstrates featur
 npm install 
 npm run start
 ```
+* To run in Dev,use:
+
+```
+npm run dev
+```
+
+
 ## Publishing on Heroku:
 
 * Post Updating the API Keys, run the following commands
