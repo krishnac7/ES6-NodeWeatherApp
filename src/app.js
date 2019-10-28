@@ -6,8 +6,8 @@ const forecast = require('../public/js/utils/forecast')
 
 
 //set api keys
-const darkSkyAPI = '8c802d90485481ef445923df9294ddb1'
-const mapBoxAPI = 'pk.eyJ1Ijoia3Jpc2huYWM3IiwiYSI6ImNrMjkwdzd5ODJlcjUzbm5yMGkxb3QydGkifQ.RoIcB1s7ww9JV-yRxm55dQ'
+const darkSkyAPI = ''
+const mapBoxAPI = ''
 
 const app = express()
 const port = process.env.PORT || 3000
