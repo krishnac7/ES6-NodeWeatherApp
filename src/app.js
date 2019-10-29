@@ -1,8 +1,8 @@
 const express = require('express')
 const path = require('path')
 const hbs = require('hbs')
-const geocode = require('../public/js/utils/geocode')
-const forecast = require('../public/js/utils/forecast')
+const geocode = require('../utils/geocode')
+const forecast = require('../utils/forecast')
 
 
 //set api keys
@@ -45,7 +45,7 @@ app.get('/help',(req,res)=>{
     res.render('help',{
        title:'The Help Page',
        message: 'A Quick Help Message',
-       name:'Krishna Balaga' 
+       name:'Krishna Balaga'
     })
 })
 
@@ -55,6 +55,10 @@ app.get('/weather',(req,res) =>{
     if(!req.query.location){
         return res.send({
             error: 'you must send in a query location to fetch weather'
+        })
+    } else if(darkSkyAPI==='' || mapBoxAPI === ''){
+        return res.send({
+            error: 'Please configure API Keys properly'
         })
     }
     geocode(mapBoxAPI,req.query.location,(error,{latitude,longitude,location}={}) =>{
@@ -74,7 +78,7 @@ app.get('/weather',(req,res) =>{
                         weather: data
                     })
                 }
-                
+
         })
      }
     })

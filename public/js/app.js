@@ -16,11 +16,6 @@ function setWeather(location){
     })
 }
 
-function sampleReturn(){
-    const name ='Krishna'
-    return {name}
-}
-
 const weatherForm = document.querySelector('form')
 const search = document.querySelector('input')
 
@@ -33,6 +28,5 @@ weatherForm.addEventListener('submit',(e)=>{
 
     // console.log(forecast.location)
     setWeather(location)
-    console.log(sampleReturn())
     
 })
